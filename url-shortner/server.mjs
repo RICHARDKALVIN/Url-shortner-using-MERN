@@ -15,6 +15,9 @@ mongoose.connect(`${databaseURL}`).then(()=>{
   });
 app.use(express.json());
 
+app.get("/test",(req,res)=>{
+    res.status(200).send("wake up");
+})
 
 
 app.post("/shorten",async(req,res)=>{
